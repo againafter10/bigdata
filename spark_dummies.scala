@@ -7,7 +7,7 @@ for (word <- words.collect()) println(word) (edited)
 
 //////////////////////////////
 /// count
-val inuputwords = List("melbourne","sydney","sanjose","bangalore","canberra","sanjose","lahore","lahore")
+val inuputwords = List("word1","word2","word3","word4","word5","word6","word7","word8")
 val words = sc.parallelize(inuputwords)
 println(words.count())
 println(words.countByValue()) //gives a list
@@ -16,16 +16,16 @@ for ((word,count) <- words.countByValue()) println(word + "occurs " + count + " 
 
 //////////////////////////////
 /// biased take
-val inputwords = List("melbourne","sydney","sanjose","bangalore","canberra","sanjose","lahore","lahore")
+val inputwords = List("word1","word2","word3","word4","word5","word6","word7","word8")
 val words = sc.parallelize(inputwords)
 words.take(90)   ///doesn't error even if the size is greater than the array size
-val inputwords = List("melbourne","sydney","sanjose","bangalore","canberra","sanjose","lahore","lahore")
+val inputwords = List("word1","word2","word3","word4","word5","word6","word7","word8")
 val words = sc.parallelize(inputwords)
 words.take(3).saveAsTextFile(words.take("test.txt")
 
 //////////////////////////////
 /// redcue
-val inputwords = List("melbourne","sydney","sanjose","bangalore","canberra","sanjose","lahore","lahore")
+val inputwords = List("word1","word2","word3","word4","word5","word6","word7","word8")
 val numbers = List(1,2,3,4)
 val words = sc.parallelize(inputwords)
 val nums = sc.parallelize(numbers)
