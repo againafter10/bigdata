@@ -1,6 +1,6 @@
 //////////////////////////////
 /// print words in an array
-val inuputwords = List("melbourne","sydney","sanjose","bangalore","canberra")
+val inuputwords = List("word1","word2","word3","word4","word5","word6","word7","word8")
 val words = sc.parallelize(inuputwords)
 
 for (word <- words.collect()) println(word) (edited)
